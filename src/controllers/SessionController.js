@@ -13,5 +13,9 @@ module.exports = {
         //const user = await User.create({ email });
 
         return res.json(user);
+    },
+    async show(req, res) {
+       let users = await User.find();
+       return res.json(users);
     }
 };

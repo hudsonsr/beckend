@@ -26,6 +26,7 @@ routes.put('/users/:id', (req, res)=>{
 });
 
 routes.post('/Sessions', SessionController.store);
+routes.get('/Sessions', SessionController.show);
 routes.post('/Spots', upload.single('thumbnail'), SpotController.store);
 routes.get('/Spots', SpotController.index);
 routes.get('/dashboard', DashboardController.show);
